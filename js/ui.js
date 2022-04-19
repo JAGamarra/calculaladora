@@ -17,13 +17,19 @@ buttons.backspace.addEventListener("click", function () {
   buttons.screen.innerText = screenText;
 });
 
-// Vía fácil
-// buttons.equal.addEventListener("click", function () {
-//   let screenText = buttons.screen.textContent;
-//   buttons.screen.innerText = eval(screenText);
-// });
+// * Vía eval() *
+buttons.equal.addEventListener("click", function () {
+  let screenText = buttons.screen.textContent;
+  try {
+    buttons.screen.innerText = eval(screenText);
+  } catch (e) {
+    buttons.screen.innerText = "Syntax Error";
+    firstKeyPress = false;
+  }
+});
 
-// Vía manual
+// * Vía manual *
+/*
 buttons.equal.addEventListener("click", function () {
   let screenText = buttons.screen.innerText;
   if (screenText.includes("*")) {
@@ -40,6 +46,7 @@ buttons.equal.addEventListener("click", function () {
     buttons.screen.innerText = Number(numbers[0]) - Number(numbers[1]);
   }
 });
+*/
 
 buttons.$buttonArray.forEach((button) => {
   button.addEventListener("click", function () {
