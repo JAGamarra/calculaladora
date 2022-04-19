@@ -61,3 +61,12 @@ buttons.$buttonArray.forEach((button) => {
     }
   });
 });
+
+buttons.speechButton.addEventListener("click", function () {
+  let text = buttons.screen.innerText;
+  if (text.length > 0) {
+    let utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "es-ES";
+    speechSynthesis.speak(utterance);
+  }
+});

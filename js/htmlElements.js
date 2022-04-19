@@ -17,6 +17,7 @@ export const three = document.getElementById("three");
 export const equal = document.getElementById("equal");
 export const zero = document.getElementById("zero");
 export const decimal = document.getElementById("decimal");
+export const speechButton = document.getElementById("speechButton");
 export const $buttonArray = [
   ...document.querySelectorAll(".buttons .button"),
 ].filter(
