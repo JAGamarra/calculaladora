@@ -1,7 +1,8 @@
 :root {
     --screen-color: #c2c5aa;
-    --button-bg: #faa307;
-    --button-bg-hover: #f48c06;
+    --button-bg: #ffaa00;
+    --button-bg-hover: #ff8800;
+    --body-bg: #f4f1de;
 }
 
 html {
@@ -16,6 +17,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    background-color: var(--body-bg);
 }
 
 #title {
@@ -29,6 +31,7 @@ body {
     margin: 0 auto;
     padding: 1.5rem;
     background-color: #3d405b8f;
+    box-shadow: 10px 10px 17px 5px rgba(0, 0, 0, 0.1);
 }
 
 #calc-brand {
@@ -56,6 +59,7 @@ body {
     font-size: 1.8rem;
     padding: .5rem;
     justify-content: flex-end;
+    box-shadow: inset 0px 0px 13px 2px rgba(0, 0, 0, 0.1);
 }
 
 .buttons {
@@ -71,8 +75,8 @@ body {
 }
 
 .button {
-    width: 4.2rem;
-    height: 4.2rem;
+    width: 4.3rem;
+    height: 4.3rem;
     gap: 1.2rem;
     background-color: var(--button-bg);
     outline: none;
@@ -81,6 +85,7 @@ body {
     transition: all .4s ease;
     font-size: 2rem;
     font-weight: bold;
+    box-shadow: 2px 2px 8px -2px #ff8800;
 }
 
 .button:hover {

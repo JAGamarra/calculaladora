@@ -7,20 +7,20 @@ buttons.clear.addEventListener("click", function () {
 });
 
 buttons.backspace.addEventListener("click", function () {
-  let screen = buttons.screen.innerText;
-  if (screen.length > 1) {
-    screen = screen.slice(0, -1);
+  let screenText = buttons.screen.innerText;
+  if (screenText.length > 1) {
+    screenText = screenText.slice(0, -1);
   } else {
-    screen = "0";
+    screenText = "0";
     firstKeyPress = false;
   }
-  buttons.screen.innerText = screen;
+  buttons.screen.innerText = screenText;
 });
 
 // Vía fácil
 buttons.equal.addEventListener("click", function () {
-  let screen = buttons.screen.textContent;
-  buttons.screen.innerText = eval(screen);
+  let screenText = buttons.screen.textContent;
+  buttons.screen.innerText = eval(screenText);
 });
 
 // Vía manual
