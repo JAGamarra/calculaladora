@@ -18,12 +18,28 @@ buttons.backspace.addEventListener("click", function () {
 });
 
 // Vía fácil
-buttons.equal.addEventListener("click", function () {
-  let screenText = buttons.screen.textContent;
-  buttons.screen.innerText = eval(screenText);
-});
+// buttons.equal.addEventListener("click", function () {
+//   let screenText = buttons.screen.textContent;
+//   buttons.screen.innerText = eval(screenText);
+// });
 
 // Vía manual
+buttons.equal.addEventListener("click", function () {
+  let screenText = buttons.screen.innerText;
+  if (screenText.includes("*")) {
+    let numbers = screenText.split("*");
+    buttons.screen.innerText = Number(numbers[0]) * Number(numbers[1]);
+  } else if (screenText.includes("/")) {
+    let numbers = screenText.split("/");
+    buttons.screen.innerText = Number(numbers[0]) / Number(numbers[1]);
+  } else if (screenText.includes("+")) {
+    let numbers = screenText.split("+");
+    buttons.screen.innerText = Number(numbers[0]) + Number(numbers[1]);
+  } else if (screenText.includes("-")) {
+    let numbers = screenText.split("-");
+    buttons.screen.innerText = Number(numbers[0]) - Number(numbers[1]);
+  }
+});
 
 buttons.$buttonArray.forEach((button) => {
   button.addEventListener("click", function () {
