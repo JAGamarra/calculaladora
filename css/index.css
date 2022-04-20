@@ -99,3 +99,23 @@ body {
 }
 
 /* TODO -> Estilizar boton de Speech */
+#speechButton {
+    width: auto;
+    height: 4rem;
+    background-color: var(--button-bg);
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: .7rem;
+    transition: all .4s ease;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 8px -2px #ff8800;
+    display: block;
+    margin: 2rem auto 0;
+    cursor: pointer;
+}
+
+#speechButton:hover {
+    cursor: pointer;
+    background-color: var(--button-bg-hover);
+}
